@@ -1,0 +1,135 @@
+/* The Guardian: a red kicker over a large serif headline, the byline in red under a rule, the text in a serif at 17px. */
+& {
+  --gu-bg: #1a1a1a;
+  --gu-fg: #dcdcdc;
+  --gu-dim: #999;
+  --gu-line: #333;
+  --gu-red: #ff5943;
+}
+
+:root[data-theme='light'] & {
+  --gu-bg: #fff;
+  --gu-fg: #121212;
+  --gu-dim: #707070;
+  --gu-line: #dcdcdc;
+  --gu-red: #c70000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) & {
+    --gu-bg: #fff;
+    --gu-fg: #121212;
+    --gu-dim: #707070;
+    --gu-line: #dcdcdc;
+    --gu-red: #c70000;
+  }
+}
+
+.reader-viewport {
+  background: var(--gu-bg);
+  font-family: 'Guardian Text Egyptian', Georgia, 'Times New Roman', serif;
+}
+
+.reader-flow {
+  padding: 0 12px;
+}
+
+.reader-flow p,
+.reader-flow li,
+.reader-item {
+  color: var(--gu-fg);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.reader-flow h2,
+.reader-flow h3,
+.reader-flow h4 {
+  color: var(--gu-fg);
+  font-family: 'Guardian Headline', Georgia, serif;
+  font-weight: 700;
+}
+
+.reader-link {
+  color: var(--gu-red);
+  text-decoration: underline;
+  text-decoration-color: var(--gu-line);
+  text-underline-offset: 0.2em;
+}
+
+.reader-quote {
+  color: var(--gu-red);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.reader-quote::before {
+  content: '\201C';
+  margin-right: 2px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.gu-head {
+  margin-bottom: 20px;
+  padding-top: 6px;
+  border-top: 1px solid var(--gu-red);
+}
+
+.gu-kicker {
+  color: var(--gu-red);
+  font-family: 'Guardian Headline', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.gu-headline {
+  margin: 4px 0 14px;
+  color: var(--gu-fg);
+  font-family: 'Guardian Headline', Georgia, serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.gu-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding-top: 6px;
+  border-top: 1px solid var(--gu-line);
+  color: var(--gu-dim);
+  font-family: 'Guardian Text Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.gu-byline {
+  flex-basis: 100%;
+  color: var(--gu-red);
+  font-weight: 700;
+}
+
+.reader-comments-head .reader-heading {
+  color: var(--gu-fg);
+  font-family: 'Guardian Headline', Georgia, serif;
+}
+
+.reader-comment-head {
+  font-family: 'Guardian Text Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.reader-comment-author {
+  color: var(--gu-red);
+}
+
+.reader-comment p,
+.reader-comment h4 {
+  color: var(--gu-fg);
+  font-size: 15px;
+}
+
+.reader-comment-replies {
+  border-left-color: var(--gu-line);
+}

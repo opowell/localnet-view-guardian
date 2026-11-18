@@ -1,0 +1,7 @@
+{
+  "name": "The Guardian views",
+  "views": [
+    { "name": "The Guardian", "kind": "listing", "hint": "A front page of tiles, the first the lead", "template": "listing.html", "style": "listing.css" },
+    { "name": "The Guardian", "kind": "content", "hint": "Serif headline and text, a red kicker", "template": "content.html", "style": "content.css" }
+  ]
+}

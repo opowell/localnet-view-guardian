@@ -1,0 +1,10 @@
+<div class="gu-head">
+  <a data-if="item.site" class="gu-kicker" href="{{ item.url || item.page }}">{{ item.site }}</a>
+  <h1 class="gu-headline">{{ item.title }}</h1>
+  <div class="gu-meta">
+    <span data-if="item.author" class="gu-byline">{{ item.author }}</span>
+    <span data-if="item.ago" class="gu-time">{{ item.ago }}</span>
+    <span data-if="item.length" class="gu-length">{{ item.length }}</span>
+    <span data-if="item.comments" class="gu-comments">{{ item.comments }} comments</span>
+  </div>
+</div>

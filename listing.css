@@ -1,0 +1,165 @@
+/* The Guardian: a navy masthead over a grid of tiles, each under a thin rule, a red kicker before its serif headline;
+   the first story the lead, twice as wide and tall. */
+& {
+  --gu-page: #1a1a1a;
+  --gu-card: #1a1a1a;
+  --gu-rule: #ff5943;
+  --gu-line: #333;
+  --gu-fg: #dcdcdc;
+  --gu-dim: #999;
+  --gu-kicker: #ff5943;
+  --gu-navy: #052962;
+  --gu-hover: #222;
+  min-height: 100%;
+  background: var(--gu-page);
+  color: var(--gu-fg);
+  font-family: 'Guardian Headline', Georgia, 'Times New Roman', serif;
+}
+
+:root[data-theme='light'] & {
+  --gu-page: #fff;
+  --gu-card: #fff;
+  --gu-rule: #c70000;
+  --gu-line: #dcdcdc;
+  --gu-fg: #121212;
+  --gu-dim: #707070;
+  --gu-kicker: #c70000;
+  --gu-hover: #f6f6f6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) & {
+    --gu-page: #fff;
+    --gu-card: #fff;
+    --gu-rule: #c70000;
+    --gu-line: #dcdcdc;
+    --gu-fg: #121212;
+    --gu-dim: #707070;
+    --gu-kicker: #c70000;
+    --gu-hover: #f6f6f6;
+  }
+}
+
+.masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 18px 20px 10px;
+  background: var(--gu-navy);
+  color: #fff;
+}
+
+.section {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.count {
+  color: #c1d8fc;
+  font-family: 'Guardian Text Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-auto-flow: dense;
+  gap: 12px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 14px 20px 32px;
+  border-top: 1px solid var(--gu-line);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+  border-top: 1px solid var(--gu-rule);
+  background: var(--gu-card);
+  color: var(--gu-fg);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: var(--gu-hover);
+}
+
+.card:hover .headline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.lead {
+  grid-column: span 2;
+}
+
+.lead.pictured {
+  grid-row: span 2;
+}
+
+.picture img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.headline {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.lead .headline {
+  font-size: 30px;
+  line-height: 1.12;
+}
+
+.kicker {
+  color: var(--gu-kicker);
+  font-weight: 700;
+}
+
+.kicker::after {
+  content: ' /';
+}
+
+.read .headline {
+  color: var(--gu-dim);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 6px;
+  color: var(--gu-dim);
+  font-family: 'Guardian Text Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+}
+
+.byline {
+  color: var(--gu-kicker);
+}
+
+.comments::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  margin-right: 4px;
+  border-radius: 5px 5px 5px 0;
+  background: var(--gu-dim);
+}
