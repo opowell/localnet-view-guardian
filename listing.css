@@ -1,14 +1,12 @@
-/* The Guardian: a navy masthead over a grid of tiles, each under a thin rule, a red kicker before its serif headline;
+/* The Guardian: a grid of tiles, each under a thin rule, a red kicker before its serif headline;
    the first story the lead, twice as wide and tall. */
 & {
   --gu-page: #1a1a1a;
   --gu-card: #1a1a1a;
   --gu-rule: #ff5943;
-  --gu-line: #333;
   --gu-fg: #dcdcdc;
   --gu-dim: #999;
   --gu-kicker: #ff5943;
-  --gu-navy: #052962;
   --gu-hover: #222;
   min-height: 100%;
   background: var(--gu-page);
@@ -20,7 +18,6 @@
   --gu-page: #fff;
   --gu-card: #fff;
   --gu-rule: #c70000;
-  --gu-line: #dcdcdc;
   --gu-fg: #121212;
   --gu-dim: #707070;
   --gu-kicker: #c70000;
@@ -32,33 +29,11 @@
     --gu-page: #fff;
     --gu-card: #fff;
     --gu-rule: #c70000;
-    --gu-line: #dcdcdc;
     --gu-fg: #121212;
     --gu-dim: #707070;
     --gu-kicker: #c70000;
     --gu-hover: #f6f6f6;
   }
-}
-
-.masthead {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding: 18px 20px 10px;
-  background: var(--gu-navy);
-  color: #fff;
-}
-
-.section {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.count {
-  color: #c1d8fc;
-  font-family: 'Guardian Text Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
 }
 
 .grid {
@@ -69,7 +44,6 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 14px 20px 32px;
-  border-top: 1px solid var(--gu-line);
 }
 
 .card {

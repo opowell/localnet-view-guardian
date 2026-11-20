@@ -1,8 +1,4 @@
 <div class="front">
-  <header class="masthead">
-    <span class="section">{{ rows.0.type || 'Results' }}</span>
-    <span class="count">{{ count }} stories</span>
-  </header>
   <div class="grid">
     <a data-for="row in rows" data-open="row" class="card" data-class-lead="$first" data-class-read="row.read" data-class-pictured="row.picture">
       <span data-if="row.picture" class="picture"><img src="{{ row.picture }}" alt="" loading="lazy"></span>
